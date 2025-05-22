@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+
+<div>
+    <pre>@Model.CurrentUser.GetInfo()</pre>
+</div>
+
+<div>
+    <pre>@Model.CompareStrings("QRS","qrs")</pre>
+</div>
+
+<div> Температура по месяцам
+    <pre>@Model.getTemperature()</pre>
+</div>
+
+<div>
+    НОД
+    <pre>@Model.GCD(1,2,3)</pre>
+</div>
+
+<div>
+    проверка окончания фраз
+    <pre>@Model.CheckPhrase()</pre>
+</div>
