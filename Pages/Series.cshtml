@@ -1,0 +1,28 @@
+﻿@page
+@model SeriesModel
+
+<h2>Вычисление суммы ряда</h2>
+<form method="post">
+    <div >
+        <label>X (|x| &lt; 1):</label>
+        <input asp-for="X"  />
+        <span asp-validation-for="X"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Точность:</label>
+        <input asp-for="Precision" />
+        <span asp-validation-for="Precision" ></span>
+    </div>
+
+    <button type="submit" >Рассчитать</button>
+</form>
+
+@if (Model.TermsCount > 0)
+{
+    <div >
+        <h4>Результат:</h4>
+        <p>Сумма: @Model.Sum.ToString("F6")</p>
+        <p>Количество слагаемых: @Model.TermsCount</p>
+    </div>
+}

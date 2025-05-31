@@ -5,12 +5,12 @@ namespace RazorPage.Pages
 {
     public class IndexModel : PageModel
     {
-        public User CurrentUser { get; set; }
+        public Person CurrentUser { get; set; }
         TemperatureManager manager = new TemperatureManager();
 
         public void OnGet()
         {
-            CurrentUser = new User("Иван", "Иванов", new DateTime(1985, 5, 15), "ivan@example.com");
+            CurrentUser = new Person("Иван", "Иванов", new DateTime(1985, 5, 15), "ivan@example.com");
         }
        
       public string getTemperature()
