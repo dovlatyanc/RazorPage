@@ -1,0 +1,16 @@
+﻿@page "{letter?}"
+@model CountLettersModel
+
+<h2>Подсчёт букв в тексте</h2>
+<form method="get">
+    <div class="form-group">
+        <label>Введите букву:</label>
+        <input type="text" maxlength="1" asp-for="Letter" />
+    </div>
+    <button type="submit" >Подсчитать</button>
+</form>
+
+@if (Model.Count > 0)
+{
+    <p>Буква '@Model.Letter' встречается @Model.Count раз</p>
+}

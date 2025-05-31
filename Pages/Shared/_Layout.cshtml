@@ -45,7 +45,28 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <div class="container">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/CountLetters">Подсчёт букв</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/DayOfYear">Конвертация даты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/WeekDays">Дни недели</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Quadratic">Квадратичный трёхчлен</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Register">Форма регистрации</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Series">Вычисление суммы ряда</a>
+            </li>
+        </ul>
+    </div>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

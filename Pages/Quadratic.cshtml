@@ -1,0 +1,28 @@
+﻿@page
+@model QuadraticModel
+
+<h2>Квадратичный трёхчлен</h2>
+<form method="post">
+    <div class="form-group">
+        <label>Коэффициент a:</label>
+        <input asp-for="A" />
+    </div>
+    <div class="form-group">
+        <label>Коэффициент b:</label>
+        <input asp-for="B" />
+    </div>
+    <div class="form-group">
+        <label>Коэффициент c:</label>
+        <input asp-for="C"/>
+    </div>
+    <div class="form-group">
+        <label>Значение x:</label>
+        <input asp-for="X" />
+    </div>
+    <button type="submit">Вычислить</button>
+</form>
+
+@if (Model.Result.HasValue)
+{
+    <p>Результат: @Model.Result.Value.ToString("F2")</p>
+}

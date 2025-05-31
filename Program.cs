@@ -13,6 +13,7 @@ namespace RazorPage
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddRazorPages();
+            builder.Services.AddSession();
 
             var app = builder.Build();
 
@@ -27,6 +28,7 @@ namespace RazorPage
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

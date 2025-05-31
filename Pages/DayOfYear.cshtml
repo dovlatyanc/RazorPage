@@ -1,0 +1,17 @@
+﻿@page
+@model DayOfYearModel
+
+<h2>Конвертация дня года в дату</h2>
+<form method="post">
+    <div>
+        <label>Номер дня (1-365):</label>
+        <input asp-for="DayNumber" />
+        <span asp-validation-for="DayNumber" ></span>
+    </div>
+    <button type="submit" >Конвертировать</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Result))
+{
+    <p>День @Model.DayNumber = @Model.Result</p>
+}
